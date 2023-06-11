@@ -1,0 +1,5 @@
+<a href="{{file.url}}">{{file.name}}</a>
+<button *ngIf="file.name.includes('.pdf')" (click)="open(file)" style="float:right" type="button" class="btn btn-primary">Open</button>
+<button (click)="deleteFile(file)" style="float:right" type="button" class="btn btn-primary">Delete</button>
+
+

@@ -1,0 +1,19 @@
+<input (change)="selectFile($event)" class="form-control" type="file">
+<button [disabled]="!selectedFiles" (click)="upload()" type="button" class="btn btn-primary">Upload</button>
+
+<div class="progress mt-3">
+    <div 
+    class="progress-bar bg-info" 
+    role="progressbar" 
+    
+    attr.aria-valuenow="{{percentage}}" 
+    aria-valuemin="0" 
+    aria-valuemax="100"
+    [ngStyle]="{width:percentage+'%'}">
+</div>
+</div>
+
+<div *ngIf="showError" class="alert alert-danger" role="alert">
+    <h4>Error - Hiba</h4>
+    {{errorMessage}}
+</div>

@@ -1,0 +1,14 @@
+<div class="card">
+    
+    <div class="card-body">
+      <h5 class="card-title">List of files</h5>
+      <ul class="list-group">
+        
+        <li *ngFor="let file of fileUploads" class="list-group-item">
+            <app-upload-details (openPdf)="open($event)" [file]="file"></app-upload-details>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
